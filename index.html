@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DineCraft Web | Digital Solutions for Restaurants</title>
+
+<meta name="description" content="DineCraft Web creates professional restaurant websites, digital menus, branding and marketing designs.">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b0b;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+:root {
+    --gold: #d9a441;
+    --gold-light: #f0c66d;
+    --dark: #0b0b0b;
+    --card: #151515;
+    --cream: #f7f1e5;
+}
+
+/* NAVIGATION */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(11,11,11,0.96);
+    border-bottom: 1px solid #292929;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: white;
+}
+
+.logo span {
+    color: var(--gold-light);
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: var(--gold-light);
+}
+
+/* HERO */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 7%;
+    background:
+    radial-gradient(circle at 80% 30%, rgba(217,164,65,.16), transparent 35%),
+    linear-gradient(135deg,#090909,#151515);
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.badge {
+    display: inline-block;
+    border: 1px solid #6e5629;
+    color: var(--gold-light);
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 82px);
+    line-height: 1.03;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--gold-light);
+}
+
+.hero p {
+    color: #cfcfcf;
+    font-size: 19px;
+    max-width: 700px;
+    margin-bottom: 35px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .25s;
+}
+
+.btn-primary {
+    background: var(--gold);
+    color: #111;
+}
+
+.btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border: 1px solid #777;
+    color: white;
+}
+
+.btn-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold-light);
+}
+
+/* GENERAL */
+
+section {
+    padding: 90px 7%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #aaa;
+}
+
+/* SERVICES */
+
+.services {
+    background: #101010;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid #282828;
+    border-radius: 15px;
+    padding: 30px;
+    transition: .25s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #715523;
+}
+
+.icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #aaa;
+    font-size: 15px;
+}
+
+/* ABOUT */
+
+.about {
+    background: var(--cream);
+    color: #111;
+}
+
+.about-box {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-box p {
+    color: #444;
+    font-size: 18px;
+}
+
+/* PROCESS */
+
+.process {
+    background: #0b0b0b;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.step {
+    border-left: 3px solid var(--gold);
+    padding: 25px;
+    background: #131313;
+}
+
+.step-number {
+    color: var(--gold-light);
+    font-weight: 800;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* PORTFOLIO */
+
+.portfolio {
+    background: #101010;
+}
+
+.portfolio-card {
+    background: #181818;
+    border: 1px solid #292929;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.portfolio-image {
+    height: 210px;
+    background:
+    linear-gradient(135deg,#1d1710,#2c2214);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    font-weight: 800;
+    color: var(--gold-light);
+}
+
+.portfolio-info {
+    padding: 22px;
+}
+
+.portfolio-info p {
+    color: #aaa;
+    margin-top: 7px;
+}
+
+/* PRICING */
+
+.pricing {
+    background: #0b0b0b;
+}
+
+.price {
+    font-size: 32px;
+    color: var(--gold-light);
+    margin: 15px 0;
+}
+
+.card ul {
+    list-style: none;
+    color: #bbb;
+    margin: 15px 0 25px;
+}
+
+.card li {
+    margin: 8px 0;
+}
+
+/* ORDER */
+
+.order {
+    background:
+    linear-gradient(rgba(15,15,15,.94),rgba(15,15,15,.94)),
+    radial-gradient(circle at center,#62491d,#0b0b0b);
+}
+
+.order-box {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.order-box h2 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.order-box p {
+    color: #bbb;
+    margin-bottom: 30px;
+}
+
+/* FAQ */
+
+.faq {
+    background: var(--cream);
+    color: #111;
+}
+
+.faq-box {
+    max-width: 850px;
+    margin: auto;
+}
+
+details {
+    background: white;
+    margin-bottom: 12px;
+    padding: 18px 20px;
+    border-radius: 8px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* CONTACT */
+
+.contact {
+    background: #101010;
+    text-align: center;
+}
+
+.contact p {
+    color: #aaa;
+    margin: 10px 0;
+}
+
+.phone {
+    color: var(--gold-light);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+    background: #050505;
+    padding: 30px 7%;
+    text-align: center;
+    color: #888;
+    border-top: 1px solid #222;
+}
+
+footer strong {
+    color: white;
+}
+
+/* MOBILE */
+
+@media(max-width: 800px) {
+
+    nav ul {
+        display: none;
+    }
+
+    .hero {
+        padding: 70px 6%;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 70px 6%;
+    }
+
+    .grid,
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .order-box h2 {
+        font-size: 34px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+    <div class="logo">DineCraft <span>Web</span></div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            DIGITAL SOLUTIONS FOR RESTAURANTS
+        </div>
+
+        <h1>
+            Your Restaurant.<br>
+            <span>Designed to Grow.</span>
+        </h1>
+
+        <p>
+            DineCraft Web creates professional restaurant websites,
+            digital menus, branding and marketing designs that help
+            restaurants build a stronger online presence.
+        </p>
+
+        <div class="buttons">
+
+            <a class="btn btn-primary"
+               href="#order">
+               Start Your Project
+            </a>
+
+            <a class="btn btn-outline"
+               href="#services">
+               Explore Services
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+    <div class="section-title">
+
+        <h2>Our Services</h2>
+
+        <p>
+            Everything your restaurant needs to look professional online.
+        </p>
+
+    </div>
+
+
+    <div class="grid">
+
+        <div class="card">
+            <div class="icon">🌐</div>
+            <h3>Restaurant Websites</h3>
+            <p>
+                Modern, mobile-friendly websites designed specifically
+                for restaurants.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">📱</div>
+            <h3>Digital Menu Cards</h3>
+            <p>
+                Beautiful QR and online menus that customers can
+                access from their phones.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">🎨</div>
+            <h3>Branding & Logo</h3>
+            <p>
+                Professional logos and complete visual identity
+                for your restaurant.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">📢</div>
+            <h3>Social Media Design</h3>
+            <p>
+                Attractive promotional designs for Instagram,
+                Facebook and other platforms.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">🖼️</div>
+            <h3>Posters & Banners</h3>
+            <p>
+                Professional promotional posters, offers,
+                banners and print designs.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">📸</div>
+            <h3>Restaurant Promotions</h3>
+            <p>
+                Creative visual content designed to showcase
+                your food and attract customers.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about">
+
+    <div class="about-box">
+
+        <div class="section-title">
+
+            <h2>About DineCraft Web</h2>
+
+        </div>
+
+        <p>
+            DineCraft Web is a restaurant-focused digital design service.
+            We combine modern web design, visual branding and digital
+            experiences to help restaurants present themselves
+            professionally online.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- PROCESS -->
+
+<section class="process">
+
+    <div class="section-title">
+
+        <h2>How It Works</h2>
+
+        <p>Simple, clear and professional.</p>
+
+    </div>
+
+
+    <div class="steps">
+
+        <div class="step">
+            <div class="step-number">01</div>
+            <h3>Tell Us What You Need</h3>
+            <p>
+                Submit your restaurant details and project requirements.
+            </p>
+        </div>
+
+
+        <div class="step">
+            <div class="step-number">02</div>
+            <h3>We Discuss</h3>
+            <p>
+                We understand your requirements and discuss the project.
+            </p>
+        </div>
+
+
+        <div class="step">
+            <div class="step-number">03</div>
+            <h3>Get Your Quote</h3>
+            <p>
+                You receive a clear quotation based on your requirements.
+            </p>
+        </div>
+
+
+        <div class="step">
+            <div class="step-number">04</div>
+            <h3>Design & Development</h3>
+            <p>
+                We start designing and developing your project.
+            </p>
+        </div>
+
+
+        <div class="step">
+            <div class="step-number">05</div>
+            <h3>Review</h3>
+            <p>
+                You review the work and request changes if required.
+            </p>
+        </div>
+
+
+        <div class="step">
+            <div class="step-number">06</div>
+            <h3>Launch</h3>
+            <p>
+                Your final project is delivered and launched.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PORTFOLIO -->
+
+<section class="portfolio" id="portfolio">
+
+    <div class="section-title">
+
+        <h2>Our Portfolio</h2>
+
+        <p>Selected concept projects by DineCraft Web.</p>
+
+    </div>
+
+
+    <div class="grid">
+
+        <div class="portfolio-card">
+
+            <div class="portfolio-image">
+                SPICE HOUSE
+            </div>
+
+            <div class="portfolio-info">
+
+                <h3>Restaurant Website</h3>
+
+                <p>
+                    Modern restaurant website concept with
+                    menu, gallery and contact sections.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="portfolio-card">
+
+            <div class="portfolio-image">
+                DIGITAL MENU
+            </div>
+
+            <div class="portfolio-info">
+
+                <h3>QR Menu Design</h3>
+
+                <p>
+                    Elegant mobile-friendly digital menu
+                    concept for restaurants.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="portfolio-card">
+
+            <div class="portfolio-image">
+                BRANDING
+            </div>
+
+            <div class="portfolio-info">
+
+                <h3>Restaurant Branding</h3>
+
+                <p>
+                    Logo, promotional material and visual
+                    identity concept.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PRICING -->
+
+<section class="pricing" id="pricing">
+
+    <div class="section-title">
+
+        <h2>Our Packages</h2>
+
+        <p>
+            Choose a starting package or request a custom quotation.
+        </p>
+
+    </div>
+
+
+    <div class="grid">
+
+        <div class="card">
+
+            <h3>Starter Website</h3>
+
+            <div class="price">From ₹2,999</div>
+
+            <ul>
+                <li>✓ Responsive website</li>
+                <li>✓ Restaurant information</li>
+                <li>✓ Digital menu</li>
+                <li>✓ WhatsApp button</li>
+                <li>✓ Google Maps</li>
+            </ul>
+
+            <a class="btn btn-primary"
+               href="#order">
+               Request Quote
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Professional</h3>
+
+            <div class="price">From ₹5,999</div>
+
+            <ul>
+                <li>✓ Multi-page website</li>
+                <li>✓ Digital menu</li>
+                <li>✓ Food gallery</li>
+                <li>✓ Reviews section</li>
+                <li>✓ Contact forms</li>
+            </ul>
+
+            <a class="btn btn-primary"
+               href="#order">
+               Request Quote
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Custom Project</h3>
+
+            <div class="price">Let's Talk</div>
+
+            <ul>
+                <li>✓ Custom website</li>
+                <li>✓ Online ordering</li>
+                <li>✓ Reservations</li>
+                <li>✓ Advanced features</li>
+                <li>✓ Custom design</li>
+            </ul>
+
+            <a class="btn btn-primary"
+               href="#order">
+               Discuss Project
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ORDER -->
+
+<section class="order" id="order">
+
+    <div class="order-box">
+
+        <h2>Start Your Project</h2>
+
+        <p>
+            Tell us what your restaurant needs.
+            We'll discuss your requirements and provide a quotation.
+        </p>
+
+        <a class="btn btn-primary"
+           href="https://wa.me/91630091805?text=Hello%20DineCraft%20Web,%20I%20am%20interested%20in%20your%20services.%0A%0ARestaurant%20Name:%0AService%20Required:%0ABudget:%0ARequirements:">
+
+           Request a Quote on WhatsApp
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="faq">
+
+    <div class="section-title">
+
+        <h2>Frequently Asked Questions</h2>
+
+    </div>
+
+
+    <div class="faq-box">
+
+        <details>
+            <summary>What type of restaurants do you work with?</summary>
+            <p>
+                We work with restaurants, cafés, bakeries,
+                cloud kitchens and food businesses.
+            </p>
+        </details>
+
+
+        <details>
+            <summary>Can you create a digital menu?</summary>
+            <p>
+                Yes. We can create mobile-friendly digital menus
+                and QR menu experiences.
+            </p>
+        </details>
+
+
+        <details>
+            <summary>Can I request a custom website?</summary>
+            <p>
+                Yes. Contact DineCraft Web with your requirements
+                and we can discuss a custom project.
+            </p>
+        </details>
+
+
+        <details>
+            <summary>How do I start a project?</summary>
+            <p>
+                Click "Request a Quote" and send us your
+                restaurant details and requirements.
+            </p>
+        </details>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <div class="section-title">
+
+        <h2>Let's Build Your Restaurant's Digital Presence</h2>
+
+        <p>Have a project in mind? Talk to DineCraft Web.</p>
+
+    </div>
+
+
+    <p>WhatsApp / Phone</p>
+
+    <div class="phone">
+        +91 630091805
+    </div>
+
+    <br>
+
+    <a class="btn btn-primary"
+       href="https://wa.me/91630091805">
+       WhatsApp DineCraft Web
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <strong>DineCraft Web</strong>
+
+    <br>
+
+    Digital Solutions for Restaurants
+
+    <br><br>
+
+    © 2026 DineCraft Web. All rights reserved.
+
+</footer>
+
+</body>
+</html>
